@@ -1,10 +1,10 @@
 # load libraries and data
 library(ggplot2)
-library (cowplot)
+library(cowplot)
 library(ggcorrplot)
 library(ppcor)
 
-data <- read.table("/Users/au612643/Desktop/par/data/data_1.txt", header=TRUE)
+data <- read.table("data_1.txt", header=TRUE)
 
 data$tstv<-(data$ts/data$tv)
 
@@ -36,4 +36,4 @@ p4 <-ggcorrplot(corr, p.mat = p.mat,type = "upper",lab = TRUE, colors = c("#377e
 
 tt <- plot_grid(p1, p2, p3, p4, ncol = 2, align="h", rel_widths = c(1,1), labels = c("A", "B", "C", "D"))
 
-ggsave("fig4.png", tt, width=20, height=16, units = "cm")
+ggsave("fig3.png", tt, width=20, height=16, units = "cm")
