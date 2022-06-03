@@ -35,10 +35,6 @@ p3
 p4 <- ggcorrplot(as.matrix(data_8), p.mat = as.matrix(data_9) ,type = "upper",lab = TRUE, colors = c("#377eb8", "white", "#e41a1c"))
 p4
 
-tt <- plot_grid(p1, p2, p3, p4, ncol = 2, align = "v", axis = "lr", rel_widths = c(1.5,1), labels = c("A", "B", "C", "D"))
-
-ggsave("fig_5.png", tt, width=35, height=25, units = "cm")
-
 # plot Figure S1
 s1 <- ggplot(data_10, aes(x=log(cMmbAvgREC), y=log(pi/nCall))) + 
   geom_point(size=0.5) + 
@@ -48,5 +44,3 @@ s1 <- ggplot(data_10, aes(x=log(cMmbAvgREC), y=log(pi/nCall))) +
   xlab(expression(italic(log[2])(cM/Mb))) + 
   ylab(expression(italic(log[2])(pi)))
 s1
-
-ggsave("fig_s1.png", s1, width=20, height=15, units = "cm")
