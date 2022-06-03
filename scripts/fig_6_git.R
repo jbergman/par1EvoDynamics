@@ -16,5 +16,3 @@ p1 <- ggplot(data_11, aes(x=sp, y=prop, fill=mType)) +
   ylab("Proportion") + 
   theme(legend.title = element_blank(), axis.text.x = element_text(angle = 270, vjust = 0.5, hjust=0))
 p1
-
-ggsave("fig_6.png", p1, width=13, height=15, units = "cm")
