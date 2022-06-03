@@ -31,9 +31,4 @@ p2 <- ggplot(data_3, aes(x=dif, y = tel, color = sp)) +
   scale_color_brewer(palette="Set1") +
   theme(legend.title = element_blank(), axis.text.x = element_text(angle = 270, vjust = 0.5, hjust=1)) + ylab("") + xlab("Z-score") + 
   geom_vline(xintercept = 0, lty=2)
-
 p2
-
-tt <- plot_grid(p1, p2, ncol = 1, axis = "lr", align="v", rel_heights = c(1, 1), labels = c("A", "B"))
-
-ggsave("fig4.png", tt, width=22, height=20, units = "cm")
