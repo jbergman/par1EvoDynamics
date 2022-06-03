@@ -12,5 +12,3 @@ p1 <- ggplot(subset(data_12, mType!="TV (CpG+)"), aes(x=mType, y=B)) +
   theme(legend.position = "none", axis.title.x = element_blank(), axis.text.x = element_text(angle = 90, hjust = 1)) +
   ylab(expression(italic(B)))+ geom_point(aes(x=mType,y=B_full), shape=18, size = 2)
 p1
-
-ggsave("fig7.png", p1, width = 11, height = 2.5)
